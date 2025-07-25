@@ -32,10 +32,4 @@ RUN chown -R www-data:www-data /var/www/html \
 
 # Expose port 80
 EXPOSE 80
-FROM php:7.4-cli
 
-# Install Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-
-WORKDIR /var/www/html
-RUN composer update
