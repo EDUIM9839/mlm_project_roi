@@ -1,0 +1,11 @@
+/vendor/
+/node_modules/
+/storage/*
+!/storage/app/
+/storage/app/public/
+/public/storage/
+/public/uploads/
+/database/dumps/
+/*.zip
+*.log
+.env

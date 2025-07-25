@@ -1,0 +1,402 @@
+/* Google Font Link 1*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.w-30-30{
+    width: 30px;
+    height: 30px;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 30px;
+}
+
+.container {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background: #12161c;
+    padding: 130px 30px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+    perspective: 2700px;
+}
+
+.container .cover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+
+.container #flip:checked~.cover {
+    transform: rotateY(-180deg);
+}
+
+.container .cover .front,
+.container .cover .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.btn i {
+    vertical-align: baseline !important;
+    margin: 0 !important;
+}
+
+
+.cover .back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.container .cover::before,
+.container .cover::after {
+    
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #ffcdcd00 ;
+    opacity: 1;
+    z-index: 12;
+}
+
+
+.container .cover::after {
+    opacity: 1;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.container .cover img {
+     position: absolute;
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+    z-index: 10;
+    border-radius: 0 25px 25px 0;
+}
+
+.container .cover .text {
+    position: absolute;
+    z-index: 130;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .cover .text a {
+    background-color: #162938;
+}
+
+.forms form .text a {
+    color: #162938;
+}
+
+.cover .text .text-1,
+.cover .text .text-2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #3a3a3a;
+    text-align: center;
+}
+
+.cover .text .text-2 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.container .forms {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+.container .form-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+        background: #12161c;
+}
+
+.form-content .login-form,
+.form-content .signup-form {
+    width: calc(100% / 2 - 25px);
+}
+
+.forms .form-content .title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}
+
+.forms .form-content .title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+    background: #162938;
+}
+
+.forms .signup-form .title:before {
+    width: 20px;
+}
+
+.forms .form-content .input-boxes {
+    margin-top: 10px;
+}
+
+.forms .form-content .input-box {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+
+.form-content .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid {
+    border-color: #162938;
+}
+
+.form-content .input-box i {
+    position: absolute;
+    color: #162938;
+    font-size: 17px;
+        padding-left: 10px;
+}
+
+.forms .form-content .text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.forms .form-content .text a {
+    text-decoration: none;
+}
+
+.forms .form-content .text a:hover {
+    text-decoration: underline;
+}
+
+.forms .form-content .button {
+    color: #fff;
+    margin-top: 40px;
+}
+
+.forms .form-content .button button {
+    color: #fff;
+    background: #efbc8;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.forms .form-content .button button:disabled {
+    color: #fff;
+    background: #162938 !important;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.forms .form-content .button button:hover {
+    background: #162938;
+}
+
+.forms .form-content label {
+    color: #162938;
+    cursor: pointer;
+}
+
+.forms .form-content label:hover {
+    text-decoration: underline;
+}
+
+.forms .form-content .login-text {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.container #flip {
+    display: none;
+}
+
+@media(max-width: 498px) {
+    .container {
+        min-width: calc(100vw - 30px);
+    }
+}
+
+@media (max-width: 730px) {
+    .container .cover {
+        display: none;
+    }
+
+    .container {
+        padding: 130px 20px;
+    }
+
+    .form-content .login-form {
+        width: 100%;
+    }
+
+}
+
+.alert-box {
+    display: none;
+}
+
+#forgotPassword-form {
+    display: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+#togglePassword,
+#toggleCPassword {
+    position: absolute;
+    right: 0;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+ 
+
+.lined-text {
+    color: hsl(var(--hue), 10%, 40%);
+    display: flex;
+    align-items: center;
+    font-size: 0.80em;
+    line-height: 2;
+    margin-bottom: 1.0em;
+    text-align: center;
+    transition: color var(--trans-dur);
+    grid-gap: 5px;
+}
+
+.lined-text:before,
+.lined-text:after {
+    background-color: rgba(148, 148, 148, 0.251);
+    content: "";
+    display: block;
+    flex: 1;
+    height: 1px;
+    transition: background-color var(--trans-dur);
+}
+
+.login__or:before {
+    margin-inline-end: 0.75em;
+}
+
+.login__or:after {
+    margin-inline-start: 0.75em;
+}
+
+.already-account {
+    text-align: center;
+    font-size: 12px;
+}
+
+input[type=Number]::-webkit-outer-spin-button,
+input[type=Number]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.name-inputs input {
+    padding-right: 10px !important;
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+input.invalid-input:focus {
+    border-color: rgb(255, 115, 115) !important;
+    color: red;
+}
+
+.invalid-text {
+    position: absolute;
+    top: 50px;
+    font-size: 12px;
+    color: red;
+    z-index: 1;
+}
+
+.d-none {
+    display: none;
+}
+
+.referalId {
+    text-transform: uppercase;
+}
+
+.referalId::placeholder {
+    text-transform: none;
+}
+
+
+.registration_background {
+    opacity: 1;
+}
+
+.swa_logo {
+    position: absolute;
+    top: 40px;
+    opacity: 1;
+}
+
+
+#togglePassword{
+    cursor: pointer;
+}
